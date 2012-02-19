@@ -1,0 +1,10 @@
+[user]
+	name = cad-san
+	email = cadsan1986@gmail.com
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	history = log --pretty=format:\"%C(yellow)%h%Creset [%Cgreen%an%Creset] %ad | %s%d\" --graph --date=short
