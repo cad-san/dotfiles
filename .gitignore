@@ -1,0 +1,30 @@
+# C++
+*.slo
+*.lo
+*.o
+*.so
+*.lai
+*.la
+*.a
+
+# Python
+*.py[co]
+
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim
+
+# Emacs
+*~
+.*~
+\#*\#
+
+# Windows
+Thumbs.db
+
+# Mac OS X
+.DS_Store
+._*
+Spotlight-V100
+.Trashes
