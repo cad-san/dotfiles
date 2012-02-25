@@ -6,7 +6,7 @@
 [core]
 	quotepath = false
 	pager = more
-	excludefile = $HOME/dotfiles/.gitignore
+	excludesfile = ~/dotfiles/.gitignore
 [alias]
 	co = checkout
 	ci = commit
