@@ -5,7 +5,7 @@
 	ui = auto
 [core]
 	quotepath = false
-	pager = more
+	pager = less -E
 	excludesfile = ~/dotfiles/.gitignore
 [alias]
 	co = checkout
