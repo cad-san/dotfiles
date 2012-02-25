@@ -3,8 +3,13 @@
 	email = cadsan1986@gmail.com
 [color]
 	ui = auto
+[core]
+	quotepath = false
+	pager = more
 [alias]
 	co = checkout
 	ci = commit
 	st = status
+	ss = status --short
 	history = log --pretty=format:\"%C(yellow)%h%Creset [%Cgreen%an%Creset] %ad | %s%d\" --graph --date=short
+	hist = log --pretty=format:\"%C(yellow)%h%Creset [%Cgreen%an%Creset] %ad | %s%d\" --graph --date=short
