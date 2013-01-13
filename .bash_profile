@@ -15,6 +15,8 @@ export CPLUS_INCLUDE_PATH=/opt/local/include:$CPLUS_INCLUDE_PATH
 export DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
 export BOOST_ROOT=/opt/local/include/boost:$BOOST_ROOT
 
+# GIT
+export GIT_EDITOR=/usr/bin/vim
 
 # Android SDK
 export PATH=$PATH:/Applications/android/tools
