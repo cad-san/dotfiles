@@ -9,6 +9,8 @@
 	excludesfile = ~/dotfiles/.gitignore
 [diff]
     tool = DiffScript
+[difftool]
+  prompt = false
 [difftool "DiffScript"]
     path = ~/bin/difftool.sh
     cmd  = "~/bin/difftool.sh \"$LOCAL\" \"$REMOTE\""
