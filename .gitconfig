@@ -7,6 +7,11 @@
 	quotepath = false
 	pager = less -E -x4
 	excludesfile = ~/dotfiles/.gitignore
+[diff]
+    tool = DiffScript
+[difftool "DiffScript"]
+    path = ~/bin/difftool.sh
+    cmd  = "~/bin/difftool.sh \"$LOCAL\" \"$REMOTE\""
 [alias]
 	co = checkout
 	ci = commit
