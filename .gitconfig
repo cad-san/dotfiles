@@ -7,6 +7,8 @@
 	quotepath = false
 	pager = less -E -x4
 	excludesfile = ~/dotfiles/.gitignore
+[push]
+	default = tracking
 [diff]
     tool = DiffScript
 [difftool]
@@ -17,7 +19,10 @@
 [alias]
 	co = checkout
 	ci = commit
+	dc = diff --cached
+	dt = difftool
 	st = status
 	ss = status --short
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t ... \\2/' | sort
 	history = log --pretty=format:\"%C(yellow)%h%Creset [%Cgreen%an%Creset] %ad | %s%d\" --graph --date=short
 	hist = log --pretty=format:\"%C(yellow)%h%Creset [%Cgreen%an%Creset] %ad | %s%d\" --graph --date=short
