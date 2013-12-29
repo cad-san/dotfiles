@@ -24,3 +24,9 @@ export PATH=$PATH:/Applications/android/tools
 # alias
 
 alias macvim="mvim --remote-tab-silent"
+
+# bash-completion
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+    . /opt/local/etc/profile.d/bash_completion.sh
+fi
+
