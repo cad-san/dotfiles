@@ -25,8 +25,19 @@ export PATH=$PATH:/Applications/android/tools
 
 alias macvim="mvim --remote-tab-silent"
 
+git_branch(){
+    __git_ps1 '(git:%s)'
+}
+
 # bash-completion
 if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
     . /opt/local/etc/profile.d/bash_completion.sh
 fi
 
+# git-completion
+if [ -d /opt/local/share/git-core/contrib/completion ]; then
+    source /opt/local/share/git-core/contrib/completion/git-completion.bash
+    source /opt/local/share/git-core/contrib/completion/git-prompt.sh
+
+    export PS1="\[\033[1;34m\]\u@\h: \[\033[1;33m\]\w \$(git_branch)\n\[\033[0m\]\$"
+fi
