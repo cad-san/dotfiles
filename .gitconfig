@@ -21,6 +21,7 @@
 	ci = commit
 	dc = diff --cached
 	dt = difftool
+	dd = difftool --dir-diff
 	st = status
 	ss = status --short
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t ... \\2/' | sort
