@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# settings for peco
+# search histroy with percol
 _replace_by_history() {
   local l=$(HISTTIMEFORMAT= history | tac | sed -e 's/^\s*[0-9]\+\s\+//' | percol --query "$READLINE_LINE")
   READLINE_LINE="$l"
