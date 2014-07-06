@@ -8,3 +8,22 @@ _replace_by_history() {
 }
 bind -x '"\C-r": _replace_by_history'
 bind    '"\C-xr": reverse-search-history'
+
+# for git
+function percol-git-branch()
+{
+	git branch | percol | sed -e "s/^\*[ ]*//g" | xargs git $*
+}
+
+function percol-git-status-files () {
+    git status --porcelain | percol | awk '{ print $2 }' | xargs git $*
+}
+
+function percol-git-ls-files()
+{
+	git ls-files | percol
+}
+
+alias gpbr='percol-git-branch'
+alias gpls='percol-git-ls-files'
+alias gpst='percol-git-status-files'
