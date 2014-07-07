@@ -12,11 +12,11 @@ bind    '"\C-xr": reverse-search-history'
 # for git
 function percol-git-branch()
 {
-	git branch | percol | sed -e "s/^\*[ ]*//g" | xargs git $*
+	git branch | percol | sed -e "s/^\*[ ]*//g" | xargs --no-run-if-empty git $*
 }
 
 function percol-git-status-files () {
-    git status --porcelain | percol | awk '{ print $2 }' | xargs git $*
+    git status --porcelain | percol | awk '{ print $2 }' | xargs --no-run-if-empty git $*
 }
 
 function percol-git-ls-files()
