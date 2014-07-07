@@ -32,3 +32,12 @@ _replace_by_git_ls_files() {
 	READLINE_POINT=${#READLINE_LINE}
 }
 bind -x '"\C-f": _replace_by_git_ls_files'
+
+# for advanced cd func
+_replace_by_acd () {
+	local l=$(cd -- | percol | awk '{ print $2 }')
+
+	READLINE_LINE="cd $l"
+	READLINE_POINT=${#READLINE_LINE}
+}
+bind -x '"\C-j": "_replace_by_acd"'
