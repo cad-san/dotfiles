@@ -25,3 +25,10 @@ function percol-git-ls-files() {
 alias gpbr='percol-git-branch | xargs --no-run-if-empty git'
 alias gpls='percol-git-ls-files | xargs --no-run-if-empty git'
 alias gpst='percol-git-status-files | xargs --no-run-if-empty git'
+
+_replace_by_git_ls_files() {
+	local l=$(percol-git-ls-files)
+	READLINE_LINE="$READLINE_LINE $l"
+	READLINE_POINT=${#READLINE_LINE}
+}
+bind -x '"\C-f": _replace_by_git_ls_files'
