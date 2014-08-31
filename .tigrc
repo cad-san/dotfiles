@@ -1,0 +1,36 @@
+# key bind
+bind diff Up scroll-line-up
+bind diff Down scroll-line-down
+
+bind main R !git rebase -i %(commit)
+bind diff R !git rebase -i %(commit)
+
+bind main D !git dd -i %(commit)
+bind diff D !git dd -i %(commit)
+
+# color
+color cursor      white magenta
+color title-focus black white
+color title-blur  white black
+color status      green default
+
+color date   cyan    default
+color id     yellow  default
+color date   cyan    default
+
+color graph-commit default default
+
+color palette-0    green   default
+color palette-1    cyan    default
+color palette-2    yellow  default
+color palette-3    red     default
+color palette-4    blue    default
+color palette-5    magenta default
+
+# view
+set tab-size = 4
+set show-id = yes
+set vertical-split = yes
+
+set show-date = local
+set line-graphics = ascii
