@@ -21,6 +21,9 @@ export GIT_EDITOR=/usr/bin/vim
 # Android SDK
 export PATH=$PATH:/Applications/android/tools
 
+export GOPATH=$HOME/go:$HOME/workspace/go
+export PATH=$HOME/go/bin:$HOME/workspace/go/bin:$PATH
+
 # alias
 
 alias macvim="mvim --remote-tab-silent"
