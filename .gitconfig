@@ -16,6 +16,14 @@
 [difftool "DiffScript"]
     path = ~/bin/difftool.sh
     cmd  = "~/bin/difftool.sh \"$LOCAL\" \"$REMOTE\""
+
+[merge]
+    tool = MergeScript
+	keepBackup = false
+[mergetool "MergeScript"]
+    path = ~/bin/mergetool.sh
+    cmd  = "~/bin/mergetool.sh \"$LOCAL\" \"$BASE\" \"$REMOTE\" \"$MERGED\""
+
 [alias]
 	co = checkout
 	ci = commit
